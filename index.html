@@ -1,1 +1,994 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e18"><meta name="description" content="Wilson Dev — developer game Android. Temukan Anime: Multiverse War, informasi privasi, dan kontak developer."><title>Wilson Dev | Developer Game Android</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="index.html">WILSON <span style="color:#ff9a43">/</span> DEV</a><nav aria-label="Main navigation"><a href="index.html#about">Tentang</a><a href="index.html#games">Game</a><a href="privacy-policy-for-anime-multiverse-war.html">Privacy Policy</a><a href="index.html#support">Kontak</a></nav></header><main><section class="hero"><div class="eyebrow">Independent Game Developer · Android</div><h1>WILSON<br><span>DEV.</span></h1><p class="lead">Developer game Android yang menghadirkan permainan penuh aksi, tantangan, dan pengalaman bermain yang menyenangkan.</p><a class="button" href="#games">Lihat Game ↗</a><a class="button secondary" href="mailto:fajarimam67@gmail.com">Hubungi Saya</a></section><section id="about"><div class="eyebrow">Tentang Developer</div><h2>Membangun pengalaman bermain.</h2><p>Wilson Dev mengembangkan game Android dengan perhatian pada gameplay, kontrol yang nyaman, dan pengembangan fitur secara berkelanjutan. Halaman ini menjadi tempat untuk mengenal game, menemukan informasi privasi, dan menghubungi developer.</p></section><section id="games" style="padding-top:42px"><div class="eyebrow">Game dari Wilson Dev</div><article class="card" style="margin:24px 0 60px"><span class="number">ANDROID / FIGHTING &amp; ADVENTURE</span><h2>Anime: Multiverse War</h2><p>Game pertarungan dengan combo, jurus, dan mode Adventure. Hadapi tantangan stage dan boss dengan pilihan kontrol analog atau tombol arah.</p><a class="button secondary" href="privacy-policy-for-anime-multiverse-war.html">Privacy Policy Game ↗</a></article></section><section class="band" id="support"><div class="eyebrow">Kontak Wilson Dev</div><h2>Mari terhubung.</h2><p>Untuk bantuan game, laporan kendala, masukan, atau pertanyaan privasi, hubungi Wilson Dev melalui email. Saat melaporkan kendala, sertakan nama game, model perangkat, dan penjelasan singkat masalah.</p><a href="mailto:fajarimam67@gmail.com" style="overflow-wrap:anywhere">fajarimam67@gmail.com</a></section></main><footer>Wilson Dev · <a href="privacy-policy-for-anime-multiverse-war.html">Anime: Multiverse War — Privacy Policy</a> · <a href="mailto:fajarimam67@gmail.com">Kontak</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description"
+    content="Wilson Dev creates Android games with engaging combat, adventurous worlds, and comfortable mobile controls. Explore our games and get in touch.">
+
+  <title>Wilson Dev | Android Game Developer</title>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #111a2e;
+      --text: #f4f6ff;
+      --muted: #adb9d2;
+      --orange: #ffad66;
+      --blue: #8fbcff;
+      --line: rgba(255, 255, 255, .1);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 85% 0%, #23334d 0%, transparent 40%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 6px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 20px;
+      padding: 10px 20px;
+      background: var(--orange);
+      color: var(--bg);
+      z-index: 10;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(11, 16, 32, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .navigation {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .logo-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--orange);
+      color: #15101a;
+      font-size: 16px;
+      letter-spacing: -.05em;
+      box-shadow: 0 5px 25px #ffad6620;
+    }
+
+    nav {
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 60px;
+      padding: 100px 0 90px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 16px #ffad6680;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 22px 0;
+      font-size: clamp(48px, 6.8vw, 82px);
+      line-height: 1.06;
+      letter-spacing: -.055em;
+    }
+
+    h1 span {
+      color: var(--orange);
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 21px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      max-width: 620px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 12px 23px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: var(--orange);
+      color: #191321;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px #ffad6620;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: #ffffff06;
+      color: var(--text);
+    }
+
+    .hero-art {
+      position: relative;
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .hero-art::before,
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffad662e;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .hero-art::before {
+      width: 340px;
+      height: 340px;
+    }
+
+    .hero-art::after {
+      width: 265px;
+      height: 265px;
+      border-style: dashed;
+      border-color: #8fbcff42;
+    }
+
+    .art-core {
+      width: 190px;
+      height: 190px;
+      display: grid;
+      place-items: center;
+      border-radius: 42px;
+      background: linear-gradient(140deg, #ffcb91, #ff9853);
+      box-shadow:
+        0 25px 90px #ff98532b,
+        inset 0 1px 0 #ffffff8a;
+      transform: rotate(-12deg);
+    }
+
+    .art-core span {
+      color: #27192b;
+      font-size: 68px;
+      font-weight: 900;
+      letter-spacing: -.09em;
+      transform: rotate(12deg);
+    }
+
+    .floating-label {
+      position: absolute;
+      padding: 10px 17px;
+      background: #152039;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 12px 35px #00000030;
+    }
+
+    .label-top {
+      top: 35px;
+      right: 0;
+    }
+
+    .label-bottom {
+      bottom: 35px;
+      left: 0;
+      color: var(--blue);
+    }
+
+    .intro-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .intro-strip strong {
+      color: var(--text);
+      margin-right: 8px;
+    }
+
+    section.content-section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .card {
+      padding: 29px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #18233a, #10182a);
+    }
+
+    .card-number {
+      display: inline-block;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin-bottom: 26px;
+    }
+
+    .card p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .games-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .featured-game {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+    }
+
+    .game-art {
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 42px;
+      background:
+        radial-gradient(circle at 10% 20%, #ffad6630, transparent 55%),
+        linear-gradient(145deg, #25273d, #151e34);
+      border-right: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-art::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -100px;
+      bottom: -80px;
+      border: 32px solid #ffad6610;
+      border-radius: 50%;
+    }
+
+    .game-art .small {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .24em;
+    }
+
+    .game-title {
+      margin: 18px 0;
+      font-size: clamp(38px, 5vw, 56px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.05em;
+    }
+
+    .game-title span {
+      color: var(--orange);
+    }
+
+    .game-art p {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .game-info {
+      padding: 42px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 23px;
+    }
+
+    .tag {
+      padding: 5px 11px;
+      border: 1px solid #ffffff15;
+      background: #ffffff05;
+      border-radius: 30px;
+      color: #c6d2eb;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    .game-info ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .game-info li {
+      margin-bottom: 8px;
+    }
+
+    .game-note {
+      font-size: 12px;
+      margin: 20px 0 0;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 700;
+      padding-right: 12px;
+    }
+
+    details p {
+      max-width: 850px;
+      margin: 16px 0 0;
+      font-size: 15px;
+    }
+
+    details a {
+      color: var(--orange);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 35px;
+      align-items: center;
+      padding: 46px;
+      background:
+        radial-gradient(ellipse at 100% 100%, #ffad6615, transparent 70%),
+        #141e32;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+    }
+
+    .contact-panel p {
+      margin-bottom: 0;
+    }
+
+    .contact-action {
+      text-align: right;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--orange);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-content p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        gap: 20px;
+      }
+
+      .hero-art::before {
+        width: 270px;
+        height: 270px;
+      }
+
+      .hero-art::after {
+        width: 225px;
+        height: 225px;
+      }
+
+      .art-core {
+        width: 155px;
+        height: 155px;
+      }
+
+      .art-core span {
+        font-size: 56px;
+      }
+
+      .about-layout {
+        gap: 35px;
+      }
+
+      .principles {
+        gap: 12px;
+      }
+
+      .card {
+        padding: 23px;
+      }
+
+      .game-info,
+      .game-art {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .navigation {
+        padding: 16px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav {
+        gap: 20px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 0 45px;
+        gap: 20px;
+      }
+
+      .hero-art {
+        min-height: 300px;
+        max-width: 340px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .label-top {
+        top: 22px;
+      }
+
+      .label-bottom {
+        bottom: 22px;
+      }
+
+      .intro-strip {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      section.content-section {
+        padding: 60px 0;
+      }
+
+      .about-layout,
+      .principles,
+      .featured-game,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .about-layout {
+        gap: 10px;
+      }
+
+      .principles {
+        margin-top: 30px;
+        gap: 16px;
+      }
+
+      .card-number {
+        margin-bottom: 16px;
+      }
+
+      .game-art {
+        min-height: 280px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-panel {
+        padding: 28px;
+        gap: 22px;
+      }
+
+      .contact-action {
+        text-align: left;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container navigation">
+      <a class="logo" href="index.html" aria-label="Wilson Dev home">
+        <span class="logo-mark" aria-hidden="true">WD</span>
+        <span>WILSON DEV</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#games">Our Games</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">
+          <span class="dot" aria-hidden="true"></span>
+          Independent Android Game Developer
+        </div>
+
+        <h1 id="hero-title">
+          Built for play.<br>
+          Made with <span>purpose.</span>
+        </h1>
+
+        <p class="lead">
+          Welcome to Wilson Dev. We create Android games that bring together
+          exciting action, memorable challenges, and controls designed for
+          the way you play on mobile.
+        </p>
+
+        <p>
+          From quick arena encounters to adventures that take you through
+          increasingly demanding stages, our focus is on giving players
+          something enjoyable to discover, practice, and return to.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#games">Explore Our Games &rarr;</a>
+          <a class="button secondary" href="#about">Meet Wilson Dev</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="floating-label label-top">IDEAS INTO PLAY</div>
+        <div class="art-core"><span>WD</span></div>
+        <div class="floating-label label-bottom">DESIGNED FOR ANDROID</div>
+      </div>
+    </section>
+
+    <div class="intro-strip" aria-label="Development focus">
+      <span><strong>Platform</strong> Android</span>
+      <span><strong>Focus</strong> Gameplay &amp; Player Experience</span>
+      <span><strong>Approach</strong> Create, Refine, Improve</span>
+    </div>
+
+    <section id="about" class="content-section">
+      <div class="about-layout">
+        <div>
+          <div class="eyebrow">About Wilson Dev</div>
+          <h2>Small details.<br>Better moments of play.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            Wilson Dev is an independent game developer focused on creating
+            enjoyable experiences for Android players. We believe a good
+            mobile game starts with a clear idea, responsive controls, and
+            gameplay that feels rewarding to learn.
+          </p>
+
+          <p>
+            Our work brings together game design, visual presentation, sound,
+            and practical mobile interfaces. Whether you are learning a
+            character’s abilities, finding a better way through a stage, or
+            preparing for a difficult boss encounter, we want each part of
+            the experience to feel connected.
+          </p>
+
+          <p>
+            Development is an ongoing process. We value player feedback
+            because it helps us understand what feels enjoyable, what needs
+            more clarity, and where the experience can improve. Our goal is
+            to keep refining the details that matter during real play.
+          </p>
+        </div>
+      </div>
+
+      <div class="principles">
+        <article class="card">
+          <span class="card-number">01 / GAMEPLAY</span>
+          <h3>Action with intention</h3>
+          <p>
+            We aim to create encounters where movement, timing, and learning
+            your abilities make a meaningful difference. Each challenge
+            should give you a reason to stay involved.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">02 / MOBILE DESIGN</span>
+          <h3>Comfort in your hands</h3>
+          <p>
+            Mobile screens deserve thoughtful interfaces. We pay attention
+            to readable information, accessible controls, and layouts that
+            help players focus on the game.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-number">03 / DEVELOPMENT</span>
+          <h3>Room to keep improving</h3>
+          <p>
+            We use feedback and testing to guide improvements, from clearer
+            menus and better animation to more balanced encounters and a
+            smoother overall experience.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="games" class="content-section games-section">
+      <div class="section-heading">
+        <div class="eyebrow">Our Games</div>
+        <h2>Discover your next challenge.</h2>
+        <p>
+          Explore a Wilson Dev project built around energetic battles,
+          character abilities, and the satisfaction of overcoming a
+          difficult opponent.
+        </p>
+      </div>
+
+      <article class="featured-game">
+        <div class="game-art">
+          <span class="small">WILSON DEV PRESENTS</span>
+
+          <div class="game-title">
+            ANIME:<br>
+            MULTIVERSE<br>
+            <span>WAR</span>
+          </div>
+
+          <p>Android &bull; Fighting &bull; Adventure</p>
+        </div>
+
+        <div class="game-info">
+          <div class="tags">
+            <span class="tag">ACTION COMBAT</span>
+            <span class="tag">ADVENTURE STAGES</span>
+            <span class="tag">BOSS ENCOUNTERS</span>
+          </div>
+
+          <h3>Enter the fight. Find your style.</h3>
+
+          <p>
+            Anime: Multiverse War brings arena combat and stage-based
+            Adventure gameplay together in one action-focused experience.
+            Combine attacks, manage your energy, and use movement to create
+            opportunities in battle.
+          </p>
+
+          <ul>
+            <li>
+              Use combos, projectiles, blocks, dashes, and character abilities.
+            </li>
+            <li>
+              Explore Adventure stages with enemies, checkpoints, and
+              limited lives.
+            </li>
+            <li>
+              Face aggressive bosses that challenge your timing and positioning.
+            </li>
+            <li>
+              Choose analog or directional controls and adjust your touch layout.
+            </li>
+          </ul>
+
+          <a
+            class="button secondary"
+            href="privacy-policy-for-anime-multiverse-war.html">
+            Read Game Privacy Policy &rarr;
+          </a>
+
+          <p class="game-note">
+            Contains advertising, including rewarded ads. Some features
+            require an internet connection.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="faq" class="content-section">
+      <div class="section-heading">
+        <div class="eyebrow">Helpful Information</div>
+        <h2>A few things you may want to know.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>What does Wilson Dev create?</summary>
+          <p>
+            Wilson Dev develops Android games with a focus on enjoyable
+            gameplay, action, and mobile-friendly controls. This website
+            introduces our projects and provides access to support and
+            game-specific privacy information.
+          </p>
+        </details>
+
+        <details>
+          <summary>How can I report a problem with a game?</summary>
+          <p>
+            Email
+            <a href="mailto:fajarimam67@gmail.com">fajarimam67@gmail.com</a>
+            with the game name, your device model, Android version, and a
+            description of the problem. If possible, include the steps that
+            caused it and a screenshot. Please do not include passwords or
+            sensitive account information.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I suggest a feature or share feedback?</summary>
+          <p>
+            Yes. We welcome constructive feedback about gameplay, controls,
+            accessibility, and the overall player experience. Send your
+            suggestion by email and explain how it could improve the game.
+            Suggestions help inform development, although we cannot promise
+            that every request will be implemented.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where can I read the privacy policy?</summary>
+          <p>
+            The privacy policy for Anime: Multiverse War is available
+            <a href="privacy-policy-for-anime-multiverse-war.html">here</a>.
+            It explains the information processed by the game and its
+            advertising services, along with available privacy choices
+            and contact details.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section">
+      <div class="contact-panel">
+        <div>
+          <div class="eyebrow">Get in Touch</div>
+          <h2>Let’s make the experience better.</h2>
+          <p>
+            Have a question, found an issue, or want to share an idea?
+            Contact Wilson Dev for game support, feedback, privacy
+            enquiries, or collaboration opportunities.
+          </p>
+        </div>
+
+        <div class="contact-action">
+          <a class="button" href="mailto:fajarimam67@gmail.com">
+            Email Wilson Dev &rarr;
+          </a>
+          <br>
+          <a class="email" href="mailto:fajarimam67@gmail.com">
+            fajarimam67@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Wilson Dev. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#games">Our Games</a>
+        <a href="privacy-policy-for-anime-multiverse-war.html">
+          Game Privacy Policy
+        </a>
+        <a href="mailto:fajarimam67@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
