@@ -1,1 +1,39 @@
+{
+    "Names": "animebattle war: waktutimer = interval interstitial dalam detik; redirect 0 = off, integer selain 0 = wajib update via linkredirect.",
+    "url1": "http://facebook.com",
+    "url2": "http://facebook.com",
+    "url3": "http://facebook.com",
+    "gantion": "1",
+  "idiklanapp": "ca-app-pub-3940256099942544~3347511713",
+  "banner": "ca-app-pub-3940256099942544/6300978111",
+  "inters": "ca-app-pub-3940256099942544/1033173712",
+  "rewards": "ca-app-pub-3940256099942544/5224354917",
+    "unity_ads": "5940639",
+    "starappads": "",
+    "fbadsid": "",
+    "fb_banner": "",
+    "fb_inter": "",
+    "fb_reward": "",
+    "pesan": "Please update Anime: Multiverse War to continue.",
+    "mopup": "",
+    "mopupbanner": "",
+    "startapp": "",
+    "iklanreaktif": "",
+    "inton": "",
+    "banneron": "",
+    "linkprivacy": "http://facebook.com",
+    "rewardon": "2",
+    "waktutimer": 500,
+    "redirect": "0",
+    "linkredirect": "http://facebook.com/",
+    "settingiklan": "1",
+    "trigeredafter": 3,
+    "more_games": [
+        {
+            "title": "Konoha Fighter",
+            "app_url": "https://play.google.com/store/apps/details?id=com.ngalaboh.konohafighter",
+            "icon_url": "https://10m.my.id/projectgame/konohafighterindonesia/konohafighter.png"
+        }
+    ]
+}
 
